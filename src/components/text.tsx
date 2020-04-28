@@ -2,7 +2,7 @@ import React from "react"
 import { css, cx } from "linaria"
 import { MEDIUM, LARGE_UP } from "../util/breakpoints"
 import {
-  BlACK,
+  BLACK,
   WHITE,
   SILVER,
   GREY,
@@ -43,6 +43,12 @@ const styles = {
     font-family: ${LOGO_FONT};
     font-size: 16px;
     letter-spacing: 0.6px;
+    /* line-height: 22px; */
+  `,
+  eyebrow: css`
+    font-family: ${LOGO_FONT};
+    font-size: 20px;
+    letter-spacing: 1px;
     /* line-height: 22px; */
   `,
   t1: css`
@@ -221,7 +227,7 @@ const colors = {
     color: ${WHITE};
   `,
   black: css`
-    color: ${BlACK};
+    color: ${BLACK};
   `,
   dark: css`
     color: ${DARK};

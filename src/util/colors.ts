@@ -1,4 +1,4 @@
-export const BlACK = "#000"
+export const BLACK = "#000"
 export const WHITE = "#fff"
 // export const LIGHT = "#fefefe"
 export const LIGHT = "#f3f3f3"
