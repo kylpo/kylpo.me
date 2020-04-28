@@ -15,6 +15,8 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-linaria`, // Must come AFTER typescript
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
