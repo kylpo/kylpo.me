@@ -6,6 +6,7 @@ import { Text } from "../components/text"
 import { Space } from "../components/space"
 import { MAX_PAGE_WIDTH } from "../util/sizes"
 import { DARK, GREY, BLACK, WHITE } from "../util/colors"
+import { MEDIUM_UP } from "../util/breakpoints"
 
 const CONTENT_OFFSET = 32
 
@@ -74,7 +75,7 @@ const HireMe = () => (
         transition: color 400ms ease;
       `}
     >
-      Available for hire!
+      Now available for hire!
     </Text>
   </a>
 )
@@ -87,9 +88,13 @@ export default function IndexPage() {
         as="main"
         center
         className={css`
-          min-height: calc(100vh - ${CONTENT_OFFSET}px);
+          min-height: 100vh;
           max-width: ${MAX_PAGE_WIDTH}px;
           margin: 0 auto;
+
+          ${MEDIUM_UP} {
+            min-height: calc(100vh - ${CONTENT_OFFSET}px);
+          }
         `}
       >
         <Text
@@ -100,7 +105,10 @@ export default function IndexPage() {
           className={css`
             position: relative;
             z-index: 100;
-            transform: translateY(${CONTENT_OFFSET}px);
+
+            ${MEDIUM_UP} {
+              transform: translateY(${CONTENT_OFFSET}px);
+            }
 
             animation: titleFadeIn 4s ease-out;
             @keyframes titleFadeIn {
@@ -127,7 +135,9 @@ export default function IndexPage() {
         <V
           center
           className={css`
-            transform: translateY(${CONTENT_OFFSET}px);
+            ${MEDIUM_UP} {
+              transform: translateY(${CONTENT_OFFSET}px);
+            }
           `}
         >
           <Space size={48} sizeMedium={64} sizeLarge={64} />
