@@ -26,6 +26,7 @@
   },
   "scripts": {
     "build": "gatsby build",
+    "rebuild": "yarn clean && yarn build",
     "dev": "gatsby develop --host=0.0.0.0 --open",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "prod": "yarn build && yarn serve",
