@@ -83,7 +83,7 @@ const HireMe = () => (
 export default function IndexPage() {
   return (
     <>
-      <SEO title="Home" />
+      <SEO title="kylpo" />
       <V
         as="main"
         center

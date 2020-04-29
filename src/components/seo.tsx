@@ -39,34 +39,34 @@ export function SEO(props: Props) {
           name: `description`,
           content: metaDescription,
         },
-        // {
-        //   property: `og:title`,
-        //   content: props.title,
-        // },
-        // {
-        //   property: `og:description`,
-        //   content: metaDescription,
-        // },
-        // {
-        //   property: `og:type`,
-        //   content: `website`,
-        // },
-        // {
-        //   name: `twitter:card`,
-        //   content: `summary`,
-        // },
-        // {
-        //   name: `twitter:creator`,
-        //   content: site.siteMetadata.author,
-        // },
-        // {
-        //   name: `twitter:title`,
-        //   content: props.title,
-        // },
-        // {
-        //   name: `twitter:description`,
-        //   content: metaDescription,
-        // },
+        {
+          property: `og:title`,
+          content: props.title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:title`,
+          content: props.title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
       ]}
     />
   )
