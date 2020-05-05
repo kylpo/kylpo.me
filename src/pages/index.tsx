@@ -140,7 +140,7 @@ export default function IndexPage() {
             }
           `}
         >
-          <Space size={48} sizeMedium={64} sizeLarge={64} />
+          <space size={{ _: 48, [MEDIUM_UP]: 64 }} />
 
           <V as="nav" center>
             <Link text="Blog" to="https://medium.com/@kylpo" />
