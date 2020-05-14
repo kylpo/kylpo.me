@@ -48,9 +48,9 @@ exports.onCreateWebpackConfig = ({
     },
   })
 
-  const configAfter = getConfig()
+  // const configAfter = getConfig()
 
-  configAfter.module.rules.forEach(rule => {
-    console.log(rule)
-  })
+  // configAfter.module.rules.forEach(rule => {
+  //   console.log(rule)
+  // })
 }

@@ -1,0 +1,6 @@
+export const SMALL_DOWN = "@media (max-width: 639px)"
+export const MEDIUM_DOWN = "@media (max-width: 1024px)"
+export const MEDIUM = "@media (min-width: 640px) and (max-width: 1024px)"
+export const MEDIUM_UP = "@media (min-width: 640px)"
+export const LARGE_UP = "@media (min-width: 1025px)"
+export const X_LARGE_UP = "@media (min-width: 1440px)"

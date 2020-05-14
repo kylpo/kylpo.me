@@ -1,7 +1,24 @@
+// import type { PointerEventsProperty} from 'csstype'
+
 type BooleanOnly = boolean | { [key: string]: boolean }
 type StringOnly = string | { [key: string]: string }
 type NumberOrString = number | string | { [key: string]: number | string }
 type NumberOrBoolean = number | boolean | { [key: string]: number | boolean }
+
+type StyleValue =
+  | React.CSSProperties
+  | { [key: string]: any }
+  | { [key: string]: { [key: string]: any } }
+
+type AnimateValue = {
+  delay?: string
+  duration?: string
+  direction?: "normal" | "reverse" | "alternate" | "alternate-reverse"
+  easing?: "ease" | "ease-in" | "ease-in-out" | "ease-out" | string
+  repeat?: true | number
+  persist?: "forwards" | "backwards" | "both" | "none"
+  keyframes?: { [key: string]: { [key: string]: any } }
+}
 
 interface PrimitiveProps {
   tag?: string
@@ -52,10 +69,14 @@ interface BoxProps extends PrimitiveProps {
   onMouseEnter?: Function
   onMouseLeave?: Function
 
-  style?:
-    | React.CSSProperties
-    | { [key: string]: any }
-    | { [key: string]: { [key: string]: any } }
+  // pointerEvents?: PointerEventsProperty
+  pointerEvents?: "none" | "auto" | "inherit" | "initial" | "unset"
+
+  style?: StyleValue
+  _style?: StyleValue
+
+  animate?: AnimateValue
+  _animate?: AnimateValue
 }
 
 interface StackBaseProps extends BoxProps {
@@ -74,7 +95,7 @@ interface StackBaseProps extends BoxProps {
 }
 
 interface StackProps extends StackBaseProps {
-  direction: "row" | "column" //today convert to v|h|z
+  direction: "row" | "column" //todo convert to v|h|z
 }
 
 interface SpaceProps extends Omit<PrimitiveProps, "children"> {
@@ -114,44 +135,29 @@ interface TextProps extends PrimitiveProps {
   html?: BooleanOnly
 
   selectable?: boolean | "all" | "auto" | "text" | "none"
+  pointerEvents?: "none" | "auto" | "inherit" | "initial" | "unset"
 
-  style?:
-    | React.CSSProperties
-    | { [key: string]: any }
-    | { [key: string]: { [key: string]: any } }
+  style?: StyleValue
+  _style?: StyleValue
+
+  animate?: AnimateValue
+  _animate?: AnimateValue
 }
-
-// declare function SPACE(props: SpaceProps): void
-
-// declare var SPACE: SpaceProps
 
 // from https://github.com/microsoft/TypeScript/issues/15449#issuecomment-385959396
 declare global {
-  var SPACE: React.FC<SpaceProps>
-  var TEXT: React.FC<TextProps>
-  var BOX: React.FC<BoxProps>
-
   namespace JSX {
-    // interface Element {
-    //   SPACE: SpaceProps
-    // }
-
     interface IntrinsicElements {
       space: SpaceProps
 
-      // SPACE: SpaceProps
-
       v: StackBaseProps
-
-      // V: {
-      //   as?: string
-      // }
-
       h: StackBaseProps
-
       z: StackBaseProps
-
       stack: StackProps
+
+      flex: StackProps
+      row: StackBaseProps
+      column: StackBaseProps
 
       box: BoxProps
 
