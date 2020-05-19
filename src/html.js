@@ -6,19 +6,22 @@ export default function HTML(props) {
     <html {...props.htmlAttributes}>
       <head>
         <meta charSet="utf-8" />
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta
+          httpEquiv="x-ua-compatible"
+          content="ie=edge"
+        />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        {/* <link
-          href="https://fonts.googleapis.com/css2?family=Unica+One&text=KYLPO&display=swap"
-          rel="stylesheet"
-        /> */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Unica+One&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ&display=swap"
           rel="stylesheet"
         />
+        {/* <link
+          href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap"
+          rel="stylesheet"
+        /> */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
           rel="stylesheet"
