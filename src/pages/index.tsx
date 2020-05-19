@@ -12,7 +12,10 @@ const CONTENT_OFFSET = 32
 export default function Home() {
   return (
     <>
-      <SEO title="kylpo" description="kylpo's personal site" />
+      <SEO
+        title="kylpo"
+        description="kylpo's personal site"
+      />
 
       <column
         tag="main"
@@ -66,22 +69,44 @@ export default function Home() {
         >
           <space size={{ _: 48, [MEDIUM_UP]: 64 }} />
 
-          <column tag="nav" center>
-            <Link text="Blog" to="https://medium.com/@kylpo" />
+          <column
+            tag="nav"
+            center
+          >
+            <Link
+              text="Blog"
+              to="https://medium.com/@kylpo"
+            />
             <Link
               text="Talks"
               to="https://www.youtube.com/watch?v=L_jzGn5b9H4&list=PLOv-RUzc-4scX3D9krJAoJGWxGKxWzXy6"
             />
-            <Link text="Email" to="mailto:kyle@chronstruct.com" />
-            <Link text="Github" to="https://github.com/kylpo" />
-            <Link text="Twitter" to="https://twitter.com/kylpo" />
-            <Link text="LinkedIn" to="https://www.linkedin.com/in/kylpo/" />
+            <Link
+              text="Email"
+              to="mailto:kyle@chronstruct.com"
+            />
+            <Link
+              text="Github"
+              to="https://github.com/kylpo"
+            />
+            <Link
+              text="Twitter"
+              to="https://twitter.com/kylpo"
+            />
+            <Link
+              text="LinkedIn"
+              to="https://www.linkedin.com/in/kylpo/"
+            />
           </column>
 
           <space size={{ _: 48, [MEDIUM_UP]: 64 }} />
 
           <box paddingHorizontal={16}>
-            <txt tag="p" center html>
+            <txt
+              tag="p"
+              center
+              html
+            >
               {"<b>Kyle Poole</b> is a full stack web and mobile developer"}
             </txt>
           </box>
