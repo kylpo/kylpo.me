@@ -111,9 +111,9 @@ export default function Home() {
             </txt>
           </box>
 
-          <space size={{ _: 48, [MEDIUM_UP]: 64 }} />
+          {/* <space size={{ _: 48, [MEDIUM_UP]: 64 }} /> */}
 
-          <HireMe />
+          {/* <HireMe /> */}
         </column>
       </column>
 
