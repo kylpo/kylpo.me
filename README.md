@@ -1,4 +1,4 @@
-# Kylpo's developer site
+# Kylpo's contact site
 
 Built with [Chronstruct-primitives](https://github.com/Chronstruct/primitives).
 
